@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Гиперссылки и форма</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="logolapka.png" alt="Логотип" />
+            </div>
+            <h1 class="site-title">Название сайта</h1>
+            <nav class="menu">
+                <a href="#">Ссылка меню 1</a>
+                <a href="#">Ссылка 2</a>
+                <a href="#">Ссылка 3</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <section id="hyperlinks" class="order-links">
+            <h2>Список гиперссылок</h2>
+            <ol>
+                <li><a href="http://kubsu.ru">Абсолютная гиперссылка...</a></li>
+                <li><a href="https://www.kubsu.ru/index.php">Абсолютная в https...</a></li>
+                <li><a href="https://kubsu.ru/"><img src="kotik.jpg" alt="Котик" width="250" /></a></li>
+                <li><a href="/library">Сокращенная ссылка</a></li>
+                <li><a href="/">Сокращенная на главную</a></li>
+                <li><a href="#form">Ссылка на фрагмент текущей страницы</a></li>
+                <li><a href="https://example.com/page?param1=value1&param2=value2&param3=value3">Ссылка с параметрами</a></li>
+                <li><a href="https://www.kubsu.ru/ru/node/38921?id=12345">Ссылка с id</a></li>
+                <li><a href="page.html">Относительная ссылка</a></li>
+                <li><a href="about/index.html">В каталог about</a></li>
+                <li><a href="../parent.html">На уровень выше</a></li>
+                <li><a href="../../grandparent.html">На два уровня выше</a></li>
+                <li>Это <a href="https://www.kubsu.ru/ru/abiturient/campaign2025">контекстная ссылка</a>.</li>
+                <li><a href="https://ru.wikipedia.org/wiki/HTML#Версии">Фрагмент другой страницы</a></li>
+                <li>Ссылка из карты изображения:</li>
+                <img src="kvadrat.png" width="100" usemap="#examplemap" />
+                <img src="krug.png" width="100" usemap="#examplemap" />
+                <map name="examplemap">
+                    <area shape="rect" coords="0,0,150,150" href="https://kubsu.ru/ru/university/library" alt="Прямоугольная" />
+                    <area shape="circle" coords="225,225,250" href="https://2gis.ru/krasnodar/firm/3237490513369361" alt="Круглая" />
+                </map>
+                <li><a href="">Ссылка с пустым href</a></li>
+                <li><a>Ссылка без href</a></li>
+                <li><a href="https://www.twitch.tv/" rel="nofollow">nofollow</a></li>
+                <li><a href="https://www.leagueoflegends.com/ru-ru/download/" rel="noindex">noindex</a></li>
+                <li>
+                    <ol>
+                        <li><a href="https://ru.wikipedia.org/wiki/HTML">HTML Wiki</a></li>
+                        <li><a href="https://vk.com/fckubsu">Fckubsu</a></li>
+                        <li><a href="https://ru.uefa.com/uefachampionsleague/standings/">UEFA</a></li>
+                    </ol>
+                </li>
+                <li><a href="ftp://user:password@example.com/file.txt">FTP файл</a></li>
+            </ol>
+        </section>
+
+    <main class="container main-container">
+        <!-- таблица -->
+        <section id="table-section" class="order-table">
+            <h2>Таблица</h2>
+            <table id="custom-table">
+                <thead>
+                    <tr>
+                        <th>Колонка 1</th>
+                        <th>Колонка 2</th>
+                        <th>Колонка 3</th>
+                        <th>Колонка 4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ячейка 1</td><td>Ячейка 2</td><td>Ячейка 3</td><td>Ячейка 4</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 5</td><td colspan="2">Объединенная ячейка</td><td>Ячейка 8</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 9</td><td>Ячейка 10</td><td>Ячейка 11</td><td rowspan="2">Объединенная ячейка</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 13</td><td>Ячейка 14</td><td>Ячейка 15</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 17</td><td>Ячейка 18</td><td>Ячейка 19</td><td>Ячейка 20</td>
+                    </tr>
+                    <tr><td colspan="4">Ячейка на всю ширину</td></tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- форма -->
+        <section id="form-section">
+            <h2 id="form">Форма</h2>
+            <form>
+                <div>
+                    <label>ФИО:</label>
+                    <input type="text" name="fio" required />
+                </div>
+                <div>
+                    <label>Телефон:</label>
+                    <input type="tel" name="phone" required />
+                </div>
+                <div>
+                    <label>E-mail:</label>
+                    <input type="email" name="email" required />
+                </div>
+                <div>
+                    <label>Дата рождения:</label>
+                    <input type="date" name="birthdate" required />
+                </div>
+                <div>
+                    <label>Пол:</label>
+                    <input type="radio" name="gender" value="male" required /> Мужской
+                    <input type="radio" name="gender" value="female" /> Женский
+                </div>
+                <div>
+                    <label>Любимый язык программирования:</label><br />
+                    <select name="languages" multiple size="5">
+                        <option>Pascal</option><option>C</option><option>C++</option>
+                        <option>JavaScript</option><option>Python</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Биография:</label><br />
+                    <textarea name="bio" rows="4"></textarea>
+                </div>
+                <div>
+                    <input type="checkbox" required /> С контрактом ознакомлен(а)
+                </div>
+                <button type="submit">Сохранить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <p>Асриянц Александра ПИ22/2</p>
+        </div>
+    </footer>
+</body>
+</html>
